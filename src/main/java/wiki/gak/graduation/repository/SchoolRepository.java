@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 import wiki.gak.graduation.model.entity.School;
 
+import java.util.List;
+
 /**
  * 学校资源操作.
  *
@@ -13,6 +15,8 @@ import wiki.gak.graduation.model.entity.School;
  */
 @Repository
 public interface SchoolRepository extends JpaRepository<School, Long>,
-    JpaSpecificationExecutor<School> {
+        JpaSpecificationExecutor<School> {
+
+    List<School> findAllByProvince(String province);
 
 }
