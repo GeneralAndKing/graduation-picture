@@ -9,3 +9,10 @@ application:
     area: hua_nan
     domain: image.ayue.wiki
     dirName: graduation-picture
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://118.24.1.170:5432/graduation-picture
+    username: picture
+    password: 123456789

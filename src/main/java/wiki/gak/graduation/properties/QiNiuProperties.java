@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import wiki.gak.graduation.model.constant.Area;
 
 /**
- * .
+ * 七牛云配置类.
  *
  * @author <a href="https://echocow.cn">EchoCow</a>
  * @date 2020/5/8 下午1:30
@@ -15,6 +15,7 @@ import wiki.gak.graduation.model.constant.Area;
 @Component
 @ConfigurationProperties(prefix = "application.qiniu")
 public class QiNiuProperties {
+
   /**
    * 七牛云开发者中心 accessKey
    */

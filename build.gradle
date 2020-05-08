@@ -36,7 +36,7 @@ repositories {
 }
 
 dependencies {
-    // implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'com.qiniu:qiniu-java-sdk:7.2.27'
     implementation 'com.alibaba:fastjson:1.2.68'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
