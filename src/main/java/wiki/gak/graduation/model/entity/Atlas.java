@@ -1,6 +1,8 @@
 package wiki.gak.graduation.model.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import javax.persistence.Table;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import wiki.gak.graduation.components.ListIntegerConverter;
 import wiki.gak.graduation.model.constant.AtlasType;
 
 /**
@@ -22,6 +25,7 @@ import wiki.gak.graduation.model.constant.AtlasType;
 @Table
 @Entity
 public class Atlas {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -60,7 +64,8 @@ public class Atlas {
   /**
    * 排列规则.
    */
-  private String rule;
+  @Convert(converter = ListIntegerConverter.class)
+  private List<Integer> rule;
 
   /**
    * 创建时间
