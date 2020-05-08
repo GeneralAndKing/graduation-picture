@@ -6,11 +6,12 @@ import java.util.List;
 import javax.persistence.AttributeConverter;
 
 /**
+ * 列表整数转换
+ *
  * @author BugRui
  * @date 2020/5/8 23:46
  **/
 public class ListIntegerConverter implements AttributeConverter<List<Integer>, String> {
-
 
   @Override
   public String convertToDatabaseColumn(List<Integer> attribute) {

@@ -17,16 +17,28 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class UniversityController {
-    @NotNull
-    final UniversityService universityService;
 
-    @GetMapping("/school/{province}")
-    public List<School> findAllSchoolByProvince(@PathVariable String province) {
-        return universityService.findAllSchoolByProvince(province);
-    }
+  @NotNull
+  final UniversityService universityService;
 
-    @GetMapping("/province")
-    public List<String> findAllProvince() {
-        return universityService.findAllProvince();
-    }
+  /**
+   * 获取指定省份下的学校信息
+   *
+   * @param province 省份
+   * @return 学校列表
+   */
+  @GetMapping("/school/{province}")
+  public List<School> findAllSchoolByProvince(@PathVariable String province) {
+    return universityService.findAllSchoolByProvince(province);
+  }
+
+  /**
+   * 获取所有省份信息
+   *
+   * @return 省份
+   */
+  @GetMapping("/province")
+  public List<String> findAllProvince() {
+    return universityService.findAllProvince();
+  }
 }

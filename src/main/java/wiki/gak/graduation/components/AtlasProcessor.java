@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import wiki.gak.graduation.model.constant.AtlasType;
 import wiki.gak.graduation.model.entity.Atlas;
 import wiki.gak.graduation.model.entity.Picture;
+import wiki.gak.graduation.model.exception.ResourceFileException;
 import wiki.gak.graduation.util.ImageUtil;
 
 /**
@@ -26,9 +27,9 @@ public class AtlasProcessor {
   /**
    * 组合所有图片为一个相册
    *
-   * @param atlas
-   * @param pictureList
-   * @return
+   * @param atlas       相册
+   * @param pictureList 图片列表
+   * @return 结果
    */
   BufferedImage process(Atlas atlas, List<Picture> pictureList, AtlasType atlasType) {
     List<Integer> rule = atlas.getRule();
@@ -49,7 +50,7 @@ public class AtlasProcessor {
       if (imageUtil.overlap(graphics, bufferedImage, (x - 1) * atlasType.getImgWidth(),
           (y - 1) * atlasType.getImgHeight())) {
         //TODO 抛出异常
-        throw new RuntimeException();
+        throw new ResourceFileException("图片处理异常");
       }
     }
     return canvas;

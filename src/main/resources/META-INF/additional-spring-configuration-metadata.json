@@ -29,6 +29,31 @@
       "name": "application.qiniu.dirName",
       "type": "java.lang.String",
       "description": "文件路径."
+    },
+    {
+      "name": "application.wechat.appId",
+      "type": "java.lang.String",
+      "description": "微信小程序 app id."
+    },
+    {
+      "name": "application.wechat.secret",
+      "type": "java.lang.String",
+      "description": "微信小程序 app secret."
+    },
+    {
+      "name": "application.wechat.baseUrl",
+      "type": "java.lang.String",
+      "description": "微信小程序 base url."
+    },
+    {
+      "name": "application.jwt.issuer",
+      "type": "java.lang.String",
+      "description": "jwt issuer."
+    },
+    {
+      "name": "application.jwt.expirationMinutes",
+      "type": "java.lang.String",
+      "description": "有效时间."
     }
   ]
 }

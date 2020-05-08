@@ -9,6 +9,9 @@ application:
     area: hua_nan
     domain: image.ayue.wiki
     dirName: graduation-picture
+  wechat:
+    appId: wx3df74b3800d2d392
+    secret: fe8b2848edec65872ad393b13de40db4
 
 spring:
   datasource:

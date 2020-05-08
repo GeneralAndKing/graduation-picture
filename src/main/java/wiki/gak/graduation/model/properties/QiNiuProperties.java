@@ -1,4 +1,4 @@
-package wiki.gak.graduation.properties;
+package wiki.gak.graduation.model.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

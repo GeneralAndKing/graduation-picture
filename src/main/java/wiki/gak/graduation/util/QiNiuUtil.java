@@ -16,7 +16,7 @@ import lombok.val;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 import wiki.gak.graduation.model.exception.ResourceFileException;
-import wiki.gak.graduation.properties.QiNiuProperties;
+import wiki.gak.graduation.model.properties.QiNiuProperties;
 
 /**
  * 七牛云工具类.

@@ -15,8 +15,14 @@ import java.util.List;
  */
 @Repository
 public interface SchoolRepository extends JpaRepository<School, Long>,
-        JpaSpecificationExecutor<School> {
+    JpaSpecificationExecutor<School> {
 
-    List<School> findAllByProvince(String province);
+  /**
+   * 根据省份获取所有的学校
+   *
+   * @param province 省份
+   * @return 学校
+   */
+  List<School> findAllByProvince(String province);
 
 }
