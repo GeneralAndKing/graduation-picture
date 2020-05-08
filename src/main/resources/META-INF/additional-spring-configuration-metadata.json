@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "application.qiniu.accessKey",
+      "type": "java.lang.String",
+      "description": "七牛云开发者中心 accessKey."
+    },
+    {
+      "name": "application.qiniu.secretKey",
+      "type": "java.lang.String",
+      "description": "七牛云开发者中心 secretKey."
+    },
+    {
+      "name": "application.qiniu.bucket",
+      "type": "java.lang.String",
+      "description": "空间名称 bucket."
+    },
+    {
+      "name": "application.qiniu.area",
+      "type": "wiki.gak.graduation.model.constant.Area",
+      "description": "地区."
+    },
+    {
+      "name": "application.qiniu.domain",
+      "type": "java.lang.String",
+      "description": "域名."
+    },
+    {
+      "name": "application.qiniu.dirName",
+      "type": "java.lang.String",
+      "description": "文件路径."
+    }
+  ]
+}

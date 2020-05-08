@@ -1,2 +1,11 @@
 server:
   port: 9000
+
+application:
+  qiniu:
+    accessKey: zuBdrSZjaBz7rw0GlpAgiKvR9gA86obUiWX9cPqo
+    secretKey: uxtunuTJB2oHwUJNYVR-cfaYOHwMjyFauDCkfEZL
+    bucket: soulmate1214
+    area: hua_nan
+    domain: image.ayue.wiki
+    dirName: graduation-picture
