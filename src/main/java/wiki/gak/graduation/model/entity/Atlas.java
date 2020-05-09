@@ -3,6 +3,7 @@ package wiki.gak.graduation.model.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
+import javax.persistence.Access;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
@@ -11,9 +12,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
+import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import wiki.gak.graduation.components.ListIntegerConverter;
+import wiki.gak.graduation.components.AxisConverter;
 import wiki.gak.graduation.model.constant.AtlasType;
 
 /**
@@ -25,6 +27,7 @@ import wiki.gak.graduation.model.constant.AtlasType;
 @Data
 @Table
 @Entity
+@Accessors(chain = true)
 public class Atlas implements Serializable {
 
   @Id
@@ -65,8 +68,8 @@ public class Atlas implements Serializable {
   /**
    * 排列规则.
    */
-  @Convert(converter = ListIntegerConverter.class)
-  private List<Integer> rule;
+  @Convert(converter = AxisConverter.class)
+  private List<List<Integer>> rule;
 
   /**
    * 创建时间
