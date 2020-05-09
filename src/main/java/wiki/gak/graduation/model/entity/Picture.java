@@ -1,5 +1,6 @@
 package wiki.gak.graduation.model.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +20,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 @Data
 @Table
 @Entity
-public class Picture {
+public class Picture implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

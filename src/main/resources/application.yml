@@ -19,3 +19,10 @@ spring:
     url: jdbc:postgresql://118.24.1.170:5432/graduation-picture
     username: picture
     password: 123456789
+  redis:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms

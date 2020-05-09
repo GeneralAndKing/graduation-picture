@@ -1,6 +1,8 @@
 package wiki.gak.graduation.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 import wiki.gak.graduation.model.entity.School;
 import wiki.gak.graduation.repository.SchoolRepository;
@@ -16,6 +18,7 @@ import java.util.List;
  **/
 @Service
 @RequiredArgsConstructor
+@CacheConfig(cacheNames = "university")
 public class UniversityServiceImpl implements UniversityService {
 
   private static final List<String> PROVINCE_LIST =
@@ -30,6 +33,7 @@ public class UniversityServiceImpl implements UniversityService {
   final SchoolRepository schoolRepository;
 
   @Override
+  @CachePut(key = "#province")
   public List<School> findAllSchoolByProvince(String province) {
     return schoolRepository.findAllByProvince(province);
   }

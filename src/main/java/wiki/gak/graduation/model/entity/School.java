@@ -1,5 +1,6 @@
 package wiki.gak.graduation.model.entity;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,7 @@ import lombok.Data;
 @Data
 @Table
 @Entity
-public class School {
+public class School implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

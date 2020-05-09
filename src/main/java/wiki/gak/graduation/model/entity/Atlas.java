@@ -1,5 +1,6 @@
 package wiki.gak.graduation.model.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 import javax.persistence.Convert;
@@ -24,7 +25,7 @@ import wiki.gak.graduation.model.constant.AtlasType;
 @Data
 @Table
 @Entity
-public class Atlas {
+public class Atlas implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
